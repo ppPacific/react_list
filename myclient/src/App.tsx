@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 import StarCard from "./components/StarCard/StarCard.tsx";
+import Navbar from "./components/Nav/NavBar.tsx";
 
 const starList = [
     {
@@ -31,35 +32,47 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+      <>
+          <Navbar />
+        <div className="parent-container">
+          <div className="main">
+              <div className="header card-col ">
+                  <img
+                      src="src/assets/images/dog-odette-1.jpeg"
+                      alt="Odette"
+                      className="header-img"
+                      aria-hidden="true"
+                      // width="120"
+                      // height={"120"}
+                  />
+                  <div className="header-content">
+                      <p className="title-font">Odette <span className="yl-font">10x</span> </p>
+                      <p className="sub-font">-Top dog: Terrier cross</p>
+                  </div>
 
-      <h1 className={"font-bold text-blue-600"}>Vite + React List</h1>
-        <div className="mx-auto max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
-            <div className="md:flex">
-                <div className="md:shrink-0">
-                    <img
-                        className="h-48 w-full object-cover md:h-full md:w-48"
-                        src="src/assets/images/MaDong.png"
-                        alt="Modern building architecture"
-                    />
-                </div>
-                <div className="p-8">
-                    <div className="text-sm font-semibold tracking-wide text-indigo-500 uppercase">Company retreats</div>
-                    <a href="#" className="mt-1 block text-lg leading-tight font-medium text-black hover:underline">
-                        Incredible accommodation for your team
-                    </a>
-                    <p className="mt-2 text-gray-500">
-                        Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of
-                        places to do just that.
-                    </p>
-                </div>
+              </div>
+              <div className="middlel try-bg">middlel text</div>
+              <div className="middler">
+                  <p className="nor-font font-mi">Maintain a consistent posting schedule.</p>
+                  <img
+                      src="./assets/images/illustration-consistent-schedule.webp"
+                      alt=""
+                      aria-hidden="true"
+                      width="416"
+                      className="middler-img-clip"
+                  />
+              </div>
+              <div className="right try-bg">right text</div>
+              <div className="middlerb try-bg">middlerb text</div>
+              <div className="middleb try-bg">middleb text</div>
+              <div className="left try-bg">left text</div>
+              <div className="leftb try-bg">leftb text</div>
 
-            </div>
-            {starList.map(person => <StarCard person={person}/>)}
-
+          </div>
         </div>
+      </>
 
-    </>
+
   )
 }
 

@@ -134,7 +134,7 @@ body{
 }
 .title-font{
   font-size: var(--font-xl);
-  text-align: center;
+  /*text-align: center;*/
 }
 .nor-font{
   font-size: var(--font-nor);
@@ -183,9 +183,10 @@ body{
   padding: 1.6rem;
 }
 .header {
-  background-color: var(--pr500);
+  /*background: url("src/assets/images/dog-odette-1.jpeg") 10% center / 100% auto no-repeat  ;*/
+  /*background-color: var(--pr500);*/
   display: flex;
-  padding: 1.6rem;
+  /*padding: 1.6rem;*/
   color: white;
   /*justify-content: center;*/
   /*align-items: center;*/
@@ -209,7 +210,7 @@ body{
     gap: 1rem;
     /*padding: 1em;*/
     grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 140px 140px 130px 130px 130px 130px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
     grid-template-areas:
                 "left header header right"
                 "left header header right"
