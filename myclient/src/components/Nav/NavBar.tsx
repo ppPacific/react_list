@@ -25,8 +25,8 @@ export default function Navbar() {
 
     return (
         <nav className="bg-white shadow sticky top-0 w-full z-50">
-            <div className="container mx-auto flex justify-between items-center py-3 px-4">
-                <div className="text-xl font-bold">YourBrand</div>
+            <div className="container mx-auto flex justify-between items-center py-10 px-12">
+                <div className="text-xl font-bold">Dog Rescue</div>
                 {/* Hamburger Icon */}
                 <button
                     className="md:hidden block"

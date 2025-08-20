@@ -112,6 +112,16 @@ ol {
 .font-mi{
   font-family: "DMSans-M", sans-serif;
 }
+
+.layout_main{
+  /*display: flex;*/
+}
+.layout_container{
+  display: flex;
+}
+.layout_contentContainer{
+  width: 100%;
+}
 body{
   font-family: "DMSans",sans-serif;
   background-color: var(--bg-color);
@@ -170,9 +180,9 @@ body{
 .middlel {
 
   background-color: var(--wh);
-  display: flex;
-  flex-direction: column;
-  padding: 1.6rem;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*padding: 1.6rem;*/
 }
 
 .middleb {
@@ -182,14 +192,29 @@ body{
   flex-direction: column;
   padding: 1.6rem;
 }
-.header {
-  /*background: url("src/assets/images/dog-odette-1.jpeg") 10% center / 100% auto no-repeat  ;*/
-  /*background-color: var(--pr500);*/
+.header,middlel {
+  position: relative;
+  overflow: hidden;
   display: flex;
-  /*padding: 1.6rem;*/
+  padding: 1.6rem;
   color: white;
+  flex-direction: column;
   /*justify-content: center;*/
   /*align-items: center;*/
+}
+/* Image takes all space, sits behind content */
+.header-img {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 200%;
+  object-fit: cover; /* covers the div, keeps aspect ratio, crops if needed */
+  z-index: 0;
+}
+
+/* Content sits above image */
+.header-content {
+  position: relative;
+  z-index: 1;
+  color: white;
 }
 .middler {
   background-color: var(--yl500);

@@ -3,6 +3,9 @@ import { useState } from 'react'
 import './App.css'
 import StarCard from "./components/StarCard/StarCard.tsx";
 import Navbar from "./components/Nav/NavBar.tsx";
+import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
+import Home from "./pages/Home/Home.tsx";
+import About from "./pages/About/About.tsx";
 
 const starList = [
     {
@@ -30,50 +33,59 @@ const starList = [
 ]
 function App() {
   const [count, setCount] = useState(0)
+    const Layout=()=>{
 
-  return (
-      <>
-          <Navbar />
-        <div className="parent-container">
-          <div className="main">
-              <div className="header card-col ">
-                  <img
-                      src="src/assets/images/dog-odette-1.jpeg"
-                      alt="Odette"
-                      className="header-img"
-                      aria-hidden="true"
-                      // width="120"
-                      // height={"120"}
-                  />
-                  <div className="header-content">
-                      <p className="title-font">Odette <span className="yl-font">10x</span> </p>
-                      <p className="sub-font">-Top dog: Terrier cross</p>
-                  </div>
+        return(
+            <div className={"layout_main"}>
+                <Navbar/>
+                <div className={"layout_container"}>
+                    {/*<div className={"menuContainer"}><Menu/></div>*/}
+                    <div className={"layout_contentContainer"}>
+                        <Outlet/>
+                    </div>
+                </div>
 
-              </div>
-              <div className="middlel try-bg">middlel text</div>
-              <div className="middler">
-                  <p className="nor-font font-mi">Maintain a consistent posting schedule.</p>
-                  <img
-                      src="./assets/images/illustration-consistent-schedule.webp"
-                      alt=""
-                      aria-hidden="true"
-                      width="416"
-                      className="middler-img-clip"
-                  />
-              </div>
-              <div className="right try-bg">right text</div>
-              <div className="middlerb try-bg">middlerb text</div>
-              <div className="middleb try-bg">middleb text</div>
-              <div className="left try-bg">left text</div>
-              <div className="leftb try-bg">leftb text</div>
+                {/*<Footer/>*/}
+            </div>
+        )
+    }
 
-          </div>
-        </div>
-      </>
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            element:<Layout/>,
+            children:[
+                {
+                    path: "/",
+                    element: (
+                        <Home/>
+                        // <div>
+                        //   <h1>Hello World</h1>
+                        //   <Link to="about">About Us</Link>
+                        // </div>
+                    ),
+                },
+                {
+                    path: "about",
+                    element: <About/>,
+                },
+                // {
+                //     path: "products",
+                //     element: <Products/>,
+                // },
+                // {
+                //     path: "test",
+                //     element: <Test/>,
+                // },
+            ]
+        },
+        // {
+        //     path: "login",
+        //     element: <Login/>
+        // }
 
-
-  )
+    ]);
+    return <RouterProvider router={router}/>
 }
 
 export default App
