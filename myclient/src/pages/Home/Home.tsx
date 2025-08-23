@@ -6,7 +6,7 @@ const Home =()=>{
     return(
         <div className="parent-container">
             <div className="main">
-                <div className="header card-col ">
+                <div className="header card-col">
                     <img
                         src="src/assets/images/dog-odette-1.jpeg"
                         alt="Odette"
@@ -24,24 +24,27 @@ const Home =()=>{
                     <img
                         src="src/assets/images/dog-albert-1.jpeg"
                         alt="Jimmy"
-                        className="header-img"
+                        className="middlel-img"
                         aria-hidden="true"
 
                     />
                     <div className="header-content">
-                        <p className="nor-font font-mi">Jimmy</p>
+                        <p className="nor-font font-mi">Albert</p>
                         <p className="sub-font">-Top dog: Mongrel</p>
                     </div>
                 </div>
                 <div className="middler">
-                    <p className="nor-font font-mi">Maintain a consistent posting schedule.</p>
                     <img
-                        src="./assets/images/illustration-consistent-schedule.webp"
-                        alt=""
+                        src="src/assets/images/dog-all.jpeg"
+                        alt="dogs"
                         aria-hidden="true"
-                        width="416"
-                        className="middler-img-clip"
+
+                        className="middler-img"
                     />
+                    <div className="header-content">
+                        <p className="nor-font font-mi">Adopt don't shop!</p>
+                    </div>
+
                 </div>
                 <div className="right try-bg">right text</div>
                 <div className="middlerb try-bg">middlerb text</div>
